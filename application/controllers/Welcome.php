@@ -30,6 +30,7 @@ class Welcome extends CI_Controller
         } catch (Services\RewardGateway\Exception $exception) {
             # Service threw Exceptions. Nothing the user did wrong
             $this->output->set_status_header(500);
+            $this->responseJson((object) ['code' => 1, 'message' => $exception->getMessage()]);
         }
     }
 
