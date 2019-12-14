@@ -24,8 +24,6 @@ final class RewardGateway implements WebServiceInterface
         $pass = $this->_config['pass'];
 
         $curl = curl_init($this->_config['endpoint'] . $this->_config['resource']);
-        //curl_setopt($curl, CURLOPT_GET, true);
-        //curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
 
         curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
         curl_setopt($curl, CURLOPT_USERPWD, "$user:$pass");
