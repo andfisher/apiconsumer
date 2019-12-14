@@ -32,9 +32,11 @@ body {
     & {
         position: relative;
         &:before {
+            content: "";
+            display: block;
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: calc(80px + 1rem);
             right: 0;
             height: 1px;
             background-color: #cdcdcd;
@@ -56,8 +58,8 @@ body {
     }
 
     .contact {
-        @include ruled;
         @include clearfix;
+        @include ruled;
         margin-bottom: 1rem;
     }
 
