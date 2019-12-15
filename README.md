@@ -9,7 +9,7 @@ Point your Apache web root at the /public directory.
 
 As is standard with the framework, set the apache config to route all requests through the index.php.
 
-## Apache vhost config
+# Apache vhost config #
 =================
 Require all granted
 
