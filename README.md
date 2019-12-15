@@ -10,13 +10,15 @@ Point your Apache web root at the /public directory.
 As is standard with the framework, set the apache config to route all requests through the index.php.
 
 # Apache vhost config #
+
 =================
+
 Require all granted
 
 RewriteEngine On
 
-# Handle Front Controller...
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L]
+
 =================
